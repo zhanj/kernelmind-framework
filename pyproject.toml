@@ -9,7 +9,7 @@ description = "A minimalist thinking kernel for LLM agents"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "you@example.com"}
+    {name = "Ethan Zhan", email = "jiezhan1@gmail.com"}
 ]
 keywords = ["ai", "agents", "llm", "workflow", "framework"]
 classifiers = [
@@ -31,6 +31,7 @@ dependencies = [
     "openai>=1.0.0",
     "pyyaml>=6.0",
     "numpy>=1.21.0",
+    "setuptools>=75.3.2",
 ]
 
 [project.optional-dependencies]
@@ -47,10 +48,10 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/your-org/kernelmind-framework"
-Repository = "https://github.com/your-org/kernelmind-framework"
-Documentation = "https://github.com/your-org/kernelmind-framework#readme"
-Issues = "https://github.com/your-org/kernelmind-framework/issues"
+Homepage = "https://github.com/zhanj/kernelmind-framework"
+Repository = "https://github.com/zhanj/kernelmind-framework"
+Documentation = "https://github.com/zhanj/kernelmind-framework#readme"
+Issues = "https://github.com/zhanj/kernelmind-framework/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
