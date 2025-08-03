@@ -16,7 +16,7 @@ class Point:
         if not isinstance(action, str): raise TypeError("Action must be string")
         return _Transition(self, action)
     
-    def load(self, memory: Dict[str, Any]) -> Any: pass
+    def load(self, memory: Dict[str, Any]) -> Any: return "start"
     def process(self, item: Any) -> Any: pass
     def save(self, memory: Dict[str, Any], prep_result: Any, exec_result: Any) -> Optional[str]: pass
     def on_fail(self, item: Any, exc: Exception) -> Any: 

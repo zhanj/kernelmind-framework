@@ -108,16 +108,28 @@ pip install -e .
 
 ```python
 from kernelmind.core import Point, Line
-from utils.call_llm import call_llm
 
 class GetQuestion(Point):
-    def process(self, _): return input("Ask: ")
-    def save(self, memory, _, out): memory["question"] = out; return "default"
+    def load(self, memory):
+        return "start"  # Return a non-None value to trigger process()
+    
+    def process(self, _): 
+        user_input = input("Ask: ")
+        return user_input
+    
+    def save(self, memory, _, out): 
+        memory["question"] = out; 
+        return "default"
 
 class AnswerQuestion(Point):
-    def load(self, memory): return memory["question"]
-    def process(self, q): return call_llm(q)
-    def save(self, memory, _, out): print("Answer:", out)
+    def load(self, memory): 
+        return memory["question"]
+    
+    def process(self, q): 
+        return f"Answer: {q}"
+    
+    def save(self, memory, _, out): 
+        print("Answer:", out)
 
 ask = GetQuestion()
 answer = AnswerQuestion()

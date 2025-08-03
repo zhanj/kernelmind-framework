@@ -53,9 +53,14 @@ Repository = "https://github.com/zhanj/kernelmind-framework"
 Documentation = "https://github.com/zhanj/kernelmind-framework#readme"
 Issues = "https://github.com/zhanj/kernelmind-framework/issues"
 
+# setuptools 配置（当前使用）
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["kernelmind*"]
+
+# Hatch 配置（如果要切换）
+# [tool.hatch.build.targets.wheel]
+# packages = ["kernelmind"]
 
 [tool.black]
 line-length = 88
