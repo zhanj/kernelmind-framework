@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="kernelmind",
-    version="0.1.0",
+    version="0.1.1",
     description="A minimalist thinking kernel for LLM agents",
     author="Ethan Zhan",
     author_email="jiezhan1@gmail.com",
